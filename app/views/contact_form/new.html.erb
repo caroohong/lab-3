@@ -1,0 +1,34 @@
+<div class="container mt-4 mb-3">
+    <h1 class="fs-1 border-bottom border-secondary py-3">Contact Us</h1>
+</div>
+<%= form_with scope: :contact_form, url: contact_form_index_path, method: :post, local: true, class: "container" do |form| %>
+<div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control mb-3 bg-transparent border-secondary-subtle text-white" %>
+</div>
+<div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control mb-3 bg-transparent border-secondary-subtle text-white" %>
+</div>
+<div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control mb-3 bg-transparent border-secondary-subtle text-white" %>
+</div>
+<%= form.submit "Submit",id: "liveToastBtn", class: "fw-semibold btn btn-primary bg-white text-black border-secondary-subtle" %>
+<% end %>
+
+<% flash.each do |key, value| %>
+<div class="my-3 bg-transparent text-white border-secondary alert alert-<%= key %>">
+    <%= value %>
+</div>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

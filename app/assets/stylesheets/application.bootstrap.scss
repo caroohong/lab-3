@@ -1,2 +1,150 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+body {
+    position:relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow:hidden;
+    background: #1b1b1b;
+    color: white;
+    height:100%;
+}
+.inline {
+    display:inline;
+}
+.home_content {
+    position:absolute;
+    left:240px;
+    height:100%;
+    width:calc(100% - 240px);
+    padding: 6px 14px;
+}
+.home_content .footer {
+    position: absolute;
+    left:240px;
+    text-align: center;
+    background:black;
+}
+//ABOUT US
+.about h1 {
+    margin-top:2rem;
+}
+//CONTACT
+.contact h1 {
+    margin-top:2rem;
+}
+.form-control {
+    background-color: gray;
+}
+//SIDEBAR
+.sidebar {
+    position:fixed;
+    border-right: solid 1px #4e4e4e; 
+    top:0;
+    left:0;
+    height:100%;
+    width:240px;
+    background:#1b1b1b;
+    padding: 6px 10px;
+}
+.sidebar .logo_content .logo {
+    color: #fff;
+    display:flex;
+    height:50px;
+    width:100%;
+    align-items:center;
+    margin-left: 1rem;
+}
+.logo_content .logo i{
+    font-size:28px;
+    margin-right:5px;
+}
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight:400;
+}
+.sidebar #btn {
+    position:absolute;
+    color: #fff;
+    left:90%;
+    top: 6px;
+    font-size:20px;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+    transform: translateX(-50%);
+}
+.sidebar ul {
+    margin-top:20px;
+}
+.sidebar ul li {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    margin: 0 5px;
+    list-style:none;
+}
+.sidebar ul li a {
+    font-size:20px;
+    color: #fff;
+    display: flex; 
+    align-items:center;
+    text-decoration:none;
+    // transition: background 0.4s ease;
+}
+.sidebar ul li a:hover {
+    // color: #11101d;
+    background: #ffffff38;
+    border-radius:2rem;
+    padding:auto;
+}
+.sidebar ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius:12px;
+    line-height: 50px;   
+    text-align:center;
+}
+
+.sidebar .profile_content {
+    position:absolute;
+    margin-left:1rem;
+    color: #fff;
+    bottom:0;
+    left:0;
+}
+.sidebar .profile_content .profile {
+    position:relative;
+    text-align:center;
+    padding:10px 6px;
+    height:60px;
+    // background:#1d1b31;
+}
+.profile_content .profile {
+    display:flex;
+    align-items: center;
+}
+.profile .profile_details .name {
+    font-size: 15px;
+    font-weight:400;
+}
+.profile .profile_details .username {
+    font-size: 12px;
+    color: #b9b9b9;
+}
+.profile #log_out {
+    position:absolute;
+    left:88%;
+    bottom:5px;
+    transform: translateX(200%);
+    min-width: 50px;
+    line-height:50px;
+    font-size:20px;
+    border-radius:12px;
+}
+
+// .home_content .text {
+//     font-size: ;
+// }
+
