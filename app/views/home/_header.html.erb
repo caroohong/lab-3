@@ -1,7 +1,11 @@
 <div class="sidebar">
     <div class="logo_content">
         <div class="logo">
-            <div class="logo_name">Y</div>
+            <%= link_to "Y", root_path, class:"links_name logo_name text-white text-decoration-none"%>
+            <%# <a href="/" class="logo_name text-white text-decoration-none">
+                <span class="links_name">Y</span>
+            </a> %>
+            <%# <div class="logo_name">Y</div> %>
         </div>
         <%# <i class='bx bx-menu' id="btn"></i> %>
     </div>
@@ -36,11 +40,23 @@
         <div class="profile">
             <div class="profile_details">
                 <div class="name_username">
-                    <div class="name">Carolina</div>
-                    <div class="username">@caroohong</div>
+                    <% if @user%>
+                        <div class=" name text-white-50 fw-light">
+                            <%= @user.email%>
+                        </div>
+                        <i class='bx bx-log-out' id="log_out"></i>
+                    <% else%>
+                    <div class="login ">
+                        <%= link_to "Log in", sign_up_path, class:"ps-4 text-white text-decoration-none fw-light"%>
+                    </div>
+                    <%end%>
+                    <%# <div class="name">Carolina</div> %>
+                    <%# <div class="username">  </div> %>
                 </div>
             </div>
-            <i class='bx bx-log-out' id="log_out"></i>
+            
         </div>
     </div>
 </div>
+
+//<%=button_to "Log out", logout_path, method: :delete, class:"ps-2 text-white text-decoration-none fw-light bg-transparent border-0"%>

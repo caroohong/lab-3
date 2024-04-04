@@ -130,12 +130,13 @@ body {
     font-weight:400;
 }
 .profile .profile_details .username {
+    padding-left: 10px;
     font-size: 12px;
     color: #b9b9b9;
 }
 .profile #log_out {
     position:absolute;
-    left:88%;
+    left:50px;
     bottom:5px;
     transform: translateX(200%);
     min-width: 50px;

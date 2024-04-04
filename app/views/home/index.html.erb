@@ -1,50 +1,16 @@
 <div class="container mt-4">
     <h1 class="fs-1 border-bottom border-secondary py-3">Home</h1>
     <p class="fs-5">What's happening?</p> 
-    <div class="tweets my-1">
-        <div class="my-2 card bg-transparent text-white" style="border:1px solid gray;">
-            <div class="card-body ">
-                <div style="white-space: nowrap; clear: both; display: flex;overflow: hidden;">
-                    <h5 class="fs-5 align-baseline card-title">KarlaYT</h5>
-                    <p class="align-baseline mx-2 text-white-50"> @the_karla12 Feb 27 </p>
-                </div>
-                <p class="card-text">Live right now on my youtube!</p>
-            </div>
-        </div>
 
-        <div class="my-2 card bg-transparent text-white" style="border:1px solid gray;">
-            <div class="card-body ">
-                <div style="white-space: nowrap; clear: both; display: flex;overflow: hidden;">
-                    <h5 class="fs-5 align-baseline card-title">FredMcAllister</h5>
-                    <p class="align-baseline mx-2 text-white-50"> @fredmcallister Feb 21 </p>
-                </div>
-                <p class="card-text">NEVER BACK DOWN, NEVER WHAT?</p>
-            </div>
+    <% if @user%>
+        <div class="text-white-50 fw-light">
+            Logged in as <%= @user.email%>
         </div>
+        <%=button_to "Log out", logout_path, method: :delete%>
+    <%end%>
 
-        <div class="my-2 card bg-transparent text-white" style="border:1px solid gray;">
-            <div class="card-body ">
-                <div style="white-space: nowrap; clear: both; display: flex;overflow: hidden;">
-                    <h5 class="fs-5 align-baseline card-title">harleyxoxo</h5>
-                    <p class="align-baseline mx-2 text-white-50"> @hxrley11 Jan 26 </p>
-                </div>
-                <p class="card-text">What SIM should I do on today's video?</p>
-            </div>
-        </div>
-
-        <div class="my-2 card bg-transparent text-white" style="border:1px solid gray;">
-            <div class="card-body ">
-                <div style="white-space: nowrap; clear: both; display: flex;overflow: hidden;">
-                    <h5 class="fs-5 align-baseline card-title">EvelynLee</h5>
-                    <p class="align-baseline mx-2 text-white-50"> @lee_evlyn Jan 11 </p>
-                </div>
-                <p class="card-text">NEW MERCH DROPPED!!</p>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
+    
 </div>
+
 
 

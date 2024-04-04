@@ -1,4 +1,6 @@
+
 Rails.application.routes.draw do
+
   # get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,7 +11,23 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root 'home#index'
-  get "/about", to: "home#about"
-  get "/contact", to: "contact_form#new"
+  get "about", to: "home#about"
+  get "sign_up", to:"registration#new"
+  post "sign_up", to: "registration#create"
+  delete "logout", to: "sessions#destroy"
+
+  get "sign_in", to:"sessions#new"
+  post "sign_in", to: "sessions#create"
+
+  get "contact", to: "contact_form#new"
   resources :contact_form, only: %i[new create]
+
+  resource :session
+  resource :password
+  resource :registration
+  resource :password_reset
+
+
+
+  # resources :tweets, except: [:edit, :update]
 end
